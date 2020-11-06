@@ -37,6 +37,6 @@ var signUp = new Vue({
             if(!this.name) this.errors.push('이름');
             if(!this.age) this.errors.push('나이');
         }
-      }
-  })
+    }
+})
 
