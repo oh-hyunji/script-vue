@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- stylesheet --> 
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="signUp">
+            <h1><i class="fas fa-user-plus"></i>&nbsp;&nbsp;회원정보 등록 & 수정 [ VUE.js ]</h1>
+            <div class="input_box">
+                <label for="email">이메일</label>
+                <input type="text" id="email" v-model="email" :disabled="validated == 1">
+            </div>
+            <div class="input_box">
+                <label for="pass">비밀번호</label>
+                <input type="password" id="pass" v-model="pass" :disabled="validated == 1">
+            </div>
+            <div class="input_box">
+                <label for="name">이름</label>
+                <input type="text" id="name" v-model="name" :disabled="validated == 1">
+            </div>
+            <div class="input_box">
+                <label for="age">나이</label>
+                <input type="number" id="이름" v-model="age" :disabled="validated == 1">
+            </div>
+            <div class="input_box">
+                <label for="hobby">취미</label>
+                <select v-model="selected" id="hobby" :disabled="validated == 1">
+                    <option v-for="option in options" v-bind:value="option.value">
+                        {{ option.text }}
+                    </option>
+                </select>
+            </div>
+            <div class="input_box">
+                <p>광고 수신 동의</p>
+                <input type="radio" name="agree" id="yes" value="예" v-model="agree" :disabled="validated == 1">
+                <label for="yes">예</label>
+                <input type="radio" name="agree" id="no" value="아니요" v-model="agree" :disabled="validated == 1">
+                <label for="no">아니요</label>
+            </div>
+            <div class="error_box" v-if="errors.length">
+                <strong><i class="far fa-check-circle"></i> 회원정보를 위해 아래 사항을 지켜주세요~</strong>
+                <p>- <span v-for="(error, index) in errors">{{ error }}{{ (index+1 < errors.length) ? ', ' : '' }}</span> 입력란을 입력하세요.</p>
+            </div>
+            <button class="submit_bt" v-on:click="submit" v-model="button">{{ button }}</button>
+            <div class="mem_info" v-if="show">
+                <strong><i class="far fa-user-circle info"></i> 회원정보 출력</strong>
+                <p>- 이메일 : <span>{{ email }}</span></p>
+                <p>- 비밀번호 : <span>{{ pass }}</span></p>
+                <p>- 이름 : <span>{{ name }}</span></p>
+                <p>- 나이 : <span>{{ age }}</span></p>
+                <p>- 취미 : <span>{{ selected }}</span></p>
+                <p>- 광고 동의 : <span>{{ agree }}</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/index.js"></script>
+</html>

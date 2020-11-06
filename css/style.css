@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/* reset */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select {margin:0; padding:0;}
+body,input,textarea,select,button,table {font-family: 'Noto Sans KR', sans-serif; font-size:16px;}
+img,fieldset {border:0;}
+ul,ol {list-style:none;}
+em,address {font-style:normal;}
+a {text-decoration:none;}
+a:hover,a:active,a:focus {text-decoration:underline;}
+article,aside,dialog,footer,header,section,footer,nav,figure {display:block; margin:0; padding:0;} /* html5 tags */
+button {cursor:pointer;}
+
+/* style */
+#wrap {width: 100%; position: relative; height: 100vh;}
+
+#signUp {width: 320px; position: absolute; top: 3%; left: 50%; transform: translateX(-50%);}
+#signUp h1 {font-size: 18px; padding-bottom: 10px; color: #333;}
+.input_box {padding: 5px 0;}
+.input_box label {padding-right: 3px;}
+.input_box p {display: inline; padding-right: 5px; padding-bottom: 5px;}
+.submit_bt {background: none; padding: 5px 15px; border: 1px solid #333; border-radius: 5px; font-size: 14px; margin: 10px 0;}
+.error_box {padding: 5px 0;}
+.error_box strong {display: block; padding-bottom: 5px; color: #004aff;}
+.error_box p {font-size: 14px; color: red;}
+.mem_info {padding-top: 10px;}
+.info {font-size: 18px;}
+.mem_info strong {display: block; padding-bottom: 5px; color: #004aff;}
+.mem_info p {color: #333; padding-bottom: 3px;}
+.mem_info span {font-style: italic;}
