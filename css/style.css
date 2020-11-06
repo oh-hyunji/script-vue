@@ -14,7 +14,7 @@ button {cursor:pointer;}
 /* style */
 #wrap {width: 100%; position: relative; height: 100vh;}
 
-#signUp {width: 320px; position: absolute; top: 3%; left: 50%; transform: translateX(-50%);}
+#signUp {width: 320px; position: absolute; top: 4%; left: 50%; transform: translateX(-50%);}
 #signUp h1 {font-size: 18px; padding-bottom: 10px; color: #333;}
 .input_box {padding: 5px 0;}
 .input_box label {padding-right: 3px;}
